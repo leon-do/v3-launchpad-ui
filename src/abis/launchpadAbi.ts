@@ -28,31 +28,6 @@ export const launchpadAbi = [
       {
         indexed: true,
         internalType: "address",
-        name: "token",
-        type: "address",
-      },
-      {
-        indexed: true,
-        internalType: "uint256",
-        name: "tokenId",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "string",
-        name: "metadata",
-        type: "string",
-      },
-    ],
-    name: "LaunchToken",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: "address",
         name: "previousOwner",
         type: "address",
       },
@@ -93,7 +68,7 @@ export const launchpadAbi = [
     inputs: [
       { internalType: "string", name: "_name", type: "string" },
       { internalType: "string", name: "_symbol", type: "string" },
-      { internalType: "string", name: "_metadata", type: "string" },
+      { internalType: "string", name: "_tokenURI", type: "string" },
     ],
     name: "launchToken",
     outputs: [],
