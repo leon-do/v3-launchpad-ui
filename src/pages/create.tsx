@@ -12,7 +12,7 @@ const Create: NextPage = () => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const imageUrl = await uploadImage(formData.get("image") as File);
-    const metadata: Metadata = {
+    const metadata: TokenURI = {
       image: imageUrl,
       description: formData.get("description") as string,
       website: formData.get("website") as string,

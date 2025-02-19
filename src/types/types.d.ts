@@ -1,4 +1,4 @@
-interface Metadata {
+interface TokenURI {
   image: string;
   description?: string;
   website?: string;
