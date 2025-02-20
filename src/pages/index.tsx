@@ -14,8 +14,10 @@ const Home: NextPage = () => {
 
       <main>
         <Link href="/create">
-          <h1>HomePage</h1>
-          <button>CreateButton</button>
+          <div className="text-4xl">HomePage</div>
+          <button className="bg-blue-500 hover:cursor-pointer text-white font-bold py-2 px-4 rounded-xl">
+            Create Button
+          </button>
         </Link>
         <NewTokens />
       </main>

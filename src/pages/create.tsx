@@ -46,7 +46,7 @@ const Create: NextPage = () => {
       </Head>
 
       <main>
-        <h1>CreatePage</h1>
+        <h1 className="text-4xl">CreatePage</h1>
         <ConnectButton />
         <form onSubmit={handleCreate}>
           <input type="text" name="name" placeholder="Name" required />
