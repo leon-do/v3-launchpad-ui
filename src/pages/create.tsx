@@ -23,12 +23,17 @@ const Create: NextPage = () => {
     const tokenURI =
       "data:application/json;base64," + btoa(JSON.stringify(metadata));
     // https://wagmi.sh/react/guides/write-to-contract#_4-hook-up-the-usewritecontract-hook
-    // https://explorer-pepe-unchained-test-ypyaeq1krb.t.conduit.xyz/address/0x0f85D54502cba5E334e1fE687aF677e8739cd9B7?tab=read_write_contract#0x19f2d255
     writeContract({
       address: process.env.NEXT_PUBLIC_LAUNCHPAD_ADDRESS as `0x${string}`,
       abi: launchpadAbi,
       functionName: "launchToken",
-      args: [formData.get("name"), formData.get("symbol"), tokenURI],
+      args: [
+        process.env
+          .NEXT_PUBLIC_NON_FUNGIBLE_POSITION_MANAGER_ADDRESS as `0x${string}`,
+        formData.get("name"),
+        formData.get("symbol"),
+        tokenURI,
+      ],
       value: BigInt("10000000000000"),
     });
   };

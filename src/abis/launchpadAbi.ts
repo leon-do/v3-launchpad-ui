@@ -3,11 +3,6 @@ export const launchpadAbi = [
     inputs: [
       { internalType: "address", name: "_owner", type: "address" },
       { internalType: "address", name: "_weth", type: "address" },
-      {
-        internalType: "address",
-        name: "_nonfungiblePositionManager",
-        type: "address",
-      },
     ],
     stateMutability: "nonpayable",
     type: "constructor",
@@ -76,6 +71,11 @@ export const launchpadAbi = [
   },
   {
     inputs: [
+      {
+        internalType: "address",
+        name: "_nonfungiblePositionManager",
+        type: "address",
+      },
       { internalType: "uint256[]", name: "_positionIds", type: "uint256[]" },
     ],
     name: "collectFees",
@@ -85,6 +85,11 @@ export const launchpadAbi = [
   },
   {
     inputs: [
+      {
+        internalType: "address",
+        name: "_nonfungiblePositionManager",
+        type: "address",
+      },
       { internalType: "string", name: "_name", type: "string" },
       { internalType: "string", name: "_symbol", type: "string" },
       { internalType: "string", name: "_tokenURI", type: "string" },
@@ -92,19 +97,6 @@ export const launchpadAbi = [
     name: "launchToken",
     outputs: [],
     stateMutability: "payable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "nonfungiblePositionManager",
-    outputs: [
-      {
-        internalType: "contract INonfungiblePositionManager",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
     type: "function",
   },
   {

@@ -1,4 +1,4 @@
-import { publicClient } from "../wagmi";
+import { publicClient } from "../config";
 import { launchpadAbi } from "../abis/launchpadAbi";
 
 export async function getTokenUris(): Promise<TokenURIs> {
